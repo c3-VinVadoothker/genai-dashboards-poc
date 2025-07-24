@@ -76,6 +76,50 @@ const nextConfig: NextConfig = {
   
   // Disable powered by header
   poweredByHeader: false,
+
+  // Vercel-specific optimizations
+  
+  // Ensure proper static generation
+  trailingSlash: false,
+  
+  // Optimize for Vercel
+  swcMinify: true,
+  
+  // Ensure proper image optimization
+  images: {
+    unoptimized: false,
+    domains: [],
+  },
+  
+  // Ensure proper redirects
+  async redirects() {
+    return [
+      {
+        source: '/index',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+  
+  // Ensure proper headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
