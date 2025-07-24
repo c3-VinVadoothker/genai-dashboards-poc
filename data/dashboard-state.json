@@ -1,0 +1,18 @@
+{
+  "components": [],
+  "layout": {
+    "columns": 12,
+    "rowHeight": 100,
+    "margin": 16
+  },
+  "lastSaved": "2025-07-24T21:06:50.288Z",
+  "uiState": {
+    "isEditMode": false,
+    "activeFilters": [],
+    "globalFilterState": {
+      "globalFilters": [],
+      "dashboardFilters": [],
+      "selectedDashboards": []
+    }
+  }
+}

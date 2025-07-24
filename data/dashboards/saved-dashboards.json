@@ -1,0 +1,32 @@
+[
+  {
+    "id": "saved_1753390956036_5ts0acaa4",
+    "dashboardId": "dashboard_1753387701683_63qgyawvz",
+    "name": "RPM vs. Wind Speed Correlation",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 6,
+      "height": 300
+    },
+    "createdAt": "2025-07-24T21:02:36.036Z",
+    "updatedAt": "2025-07-24T21:02:36.036Z"
+  },
+  {
+    "id": "saved_1753391160373_3uvuhn0e5",
+    "dashboardId": "dashboard_1753384223322_69uy61raq",
+    "name": "RPM vs. Wind Speed Correlation",
+    "position": {
+      "x": 1,
+      "y": 0
+    },
+    "size": {
+      "width": 6,
+      "height": 300
+    },
+    "createdAt": "2025-07-24T21:06:00.373Z",
+    "updatedAt": "2025-07-24T21:06:00.373Z"
+  }
+]

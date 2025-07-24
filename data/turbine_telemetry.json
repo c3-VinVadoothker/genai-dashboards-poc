@@ -1,0 +1,802 @@
+[
+  {
+    "turbine_id": "WTG-001",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 350.5,
+    "wind_speed_mph": 25,
+    "rotor_rpm": 15.1,
+    "gearbox_temp_c": 62
+  },
+  {
+    "turbine_id": "WTG-002",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 410.2,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 16.5,
+    "gearbox_temp_c": 64
+  },
+  {
+    "turbine_id": "WTG-003",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 150.0,
+    "wind_speed_mph": 18,
+    "rotor_rpm": 12.0,
+    "gearbox_temp_c": 75
+  },
+  {
+    "turbine_id": "WTG-004",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 480.8,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.0,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-005",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 385.3,
+    "wind_speed_mph": 26,
+    "rotor_rpm": 15.8,
+    "gearbox_temp_c": 63
+  },
+  {
+    "turbine_id": "WTG-006",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.7,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 16.9,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-007",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 495.2,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.3,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-008",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 45
+  },
+  {
+    "turbine_id": "WTG-009",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.8,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.2,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-010",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 395.1,
+    "wind_speed_mph": 27,
+    "rotor_rpm": 16.1,
+    "gearbox_temp_c": 64
+  },
+  {
+    "turbine_id": "WTG-011",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 165.3,
+    "wind_speed_mph": 19,
+    "rotor_rpm": 12.5,
+    "gearbox_temp_c": 78
+  },
+  {
+    "turbine_id": "WTG-012",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 405.6,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 16.7,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-013",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 435.9,
+    "wind_speed_mph": 31,
+    "rotor_rpm": 17.5,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-014",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.2,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 16.8,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-015",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 485.7,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.4,
+    "gearbox_temp_c": 70
+  },
+  {
+    "turbine_id": "WTG-016",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 42
+  },
+  {
+    "turbine_id": "WTG-017",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 455.3,
+    "wind_speed_mph": 31,
+    "rotor_rpm": 17.6,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-018",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.8,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 16.9,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-019",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 185.7,
+    "wind_speed_mph": 20,
+    "rotor_rpm": 13.2,
+    "gearbox_temp_c": 76
+  },
+  {
+    "turbine_id": "WTG-020",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 395.4,
+    "wind_speed_mph": 27,
+    "rotor_rpm": 16.2,
+    "gearbox_temp_c": 64
+  },
+  {
+    "turbine_id": "WTG-021",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.1,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.3,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-022",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.9,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 16.6,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-023",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.2,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.1,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-024",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 44
+  },
+  {
+    "turbine_id": "WTG-025",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 435.6,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.4,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-026",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 405.3,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 16.8,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-027",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 175.8,
+    "wind_speed_mph": 21,
+    "rotor_rpm": 13.5,
+    "gearbox_temp_c": 77
+  },
+  {
+    "turbine_id": "WTG-028",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.7,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 17.0,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-029",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 455.4,
+    "wind_speed_mph": 31,
+    "rotor_rpm": 17.7,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-030",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.8,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 16.7,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-031",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 485.1,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.2,
+    "gearbox_temp_c": 70
+  },
+  {
+    "turbine_id": "WTG-032",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.3,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 16.9,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-033",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.7,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.5,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-034",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 43
+  },
+  {
+    "turbine_id": "WTG-035",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.8,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.0,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-036",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 435.2,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.3,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-037",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 195.6,
+    "wind_speed_mph": 22,
+    "rotor_rpm": 13.8,
+    "gearbox_temp_c": 75
+  },
+  {
+    "turbine_id": "WTG-038",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.9,
+    "wind_speed_mph": 31,
+    "rotor_rpm": 17.6,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-039",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.4,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 16.8,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-040",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 485.3,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.3,
+    "gearbox_temp_c": 70
+  },
+  {
+    "turbine_id": "WTG-041",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.6,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 17.0,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-042",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 41
+  },
+  {
+    "turbine_id": "WTG-043",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 455.7,
+    "wind_speed_mph": 31,
+    "rotor_rpm": 17.8,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-044",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 435.1,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.4,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-045",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 205.3,
+    "wind_speed_mph": 23,
+    "rotor_rpm": 14.1,
+    "gearbox_temp_c": 76
+  },
+  {
+    "turbine_id": "WTG-046",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 455.8,
+    "wind_speed_mph": 31,
+    "rotor_rpm": 17.7,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-047",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.5,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 16.9,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-048",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 485.6,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.4,
+    "gearbox_temp_c": 70
+  },
+  {
+    "turbine_id": "WTG-049",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.9,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 17.1,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-050",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.3,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.5,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-051",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 42
+  },
+  {
+    "turbine_id": "WTG-052",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 465.2,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 17.9,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-053",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 435.8,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.6,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-054",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.7,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 17.0,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-055",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 215.8,
+    "wind_speed_mph": 24,
+    "rotor_rpm": 14.3,
+    "gearbox_temp_c": 77
+  },
+  {
+    "turbine_id": "WTG-056",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 465.9,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.0,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-057",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.4,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 17.2,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-058",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.5,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.7,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-059",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 485.4,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.3,
+    "gearbox_temp_c": 70
+  },
+  {
+    "turbine_id": "WTG-060",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 43
+  },
+  {
+    "turbine_id": "WTG-061",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.1,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.1,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-062",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 435.9,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.8,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-063",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.6,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 17.1,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-064",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 225.7,
+    "wind_speed_mph": 25,
+    "rotor_rpm": 14.5,
+    "gearbox_temp_c": 76
+  },
+  {
+    "turbine_id": "WTG-065",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.3,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.2,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-066",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.8,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 17.3,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-067",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.7,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.9,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-068",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 485.5,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.4,
+    "gearbox_temp_c": 70
+  },
+  {
+    "turbine_id": "WTG-069",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 44
+  },
+  {
+    "turbine_id": "WTG-070",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.6,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.3,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-071",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 435.4,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.7,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-072",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.9,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 17.2,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-073",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.2,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.8,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-074",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 235.8,
+    "wind_speed_mph": 26,
+    "rotor_rpm": 14.7,
+    "gearbox_temp_c": 77
+  },
+  {
+    "turbine_id": "WTG-075",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.9,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.4,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-076",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.5,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 17.4,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-077",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.8,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.9,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-078",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 485.7,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.5,
+    "gearbox_temp_c": 70
+  },
+  {
+    "turbine_id": "WTG-079",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 41
+  },
+  {
+    "turbine_id": "WTG-080",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.4,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.2,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-081",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 435.6,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.8,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-082",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.3,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 17.3,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-083",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.9,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 18.0,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-084",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 245.6,
+    "wind_speed_mph": 27,
+    "rotor_rpm": 14.9,
+    "gearbox_temp_c": 76
+  },
+  {
+    "turbine_id": "WTG-085",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.8,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.3,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-086",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.7,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 17.5,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-087",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.4,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 18.1,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-088",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 485.9,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.6,
+    "gearbox_temp_c": 70
+  },
+  {
+    "turbine_id": "WTG-089",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 42
+  },
+  {
+    "turbine_id": "WTG-090",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.5,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.4,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-091",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 435.8,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 17.9,
+    "gearbox_temp_c": 68
+  },
+  {
+    "turbine_id": "WTG-092",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 415.4,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 17.4,
+    "gearbox_temp_c": 65
+  },
+  {
+    "turbine_id": "WTG-093",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.6,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 18.2,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-094",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 255.3,
+    "wind_speed_mph": 28,
+    "rotor_rpm": 15.1,
+    "gearbox_temp_c": 77
+  },
+  {
+    "turbine_id": "WTG-095",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.7,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.5,
+    "gearbox_temp_c": 69
+  },
+  {
+    "turbine_id": "WTG-096",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 425.9,
+    "wind_speed_mph": 29,
+    "rotor_rpm": 17.6,
+    "gearbox_temp_c": 66
+  },
+  {
+    "turbine_id": "WTG-097",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 445.3,
+    "wind_speed_mph": 30,
+    "rotor_rpm": 18.3,
+    "gearbox_temp_c": 67
+  },
+  {
+    "turbine_id": "WTG-098",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 485.8,
+    "wind_speed_mph": 33,
+    "rotor_rpm": 18.7,
+    "gearbox_temp_c": 70
+  },
+  {
+    "turbine_id": "WTG-099",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 0.0,
+    "wind_speed_mph": 0,
+    "rotor_rpm": 0,
+    "gearbox_temp_c": 43
+  },
+  {
+    "turbine_id": "WTG-100",
+    "timestamp": "2025-07-22T14:00:00Z",
+    "power_output_kw": 475.6,
+    "wind_speed_mph": 32,
+    "rotor_rpm": 18.6,
+    "gearbox_temp_c": 69
+  }
+]

@@ -1,0 +1,179 @@
+[
+  {
+    "id": "thread_1753383965964_9arn9rz1x",
+    "title": "make me a dashboard to...",
+    "messages": [
+      {
+        "id": "welcome",
+        "content": "Hello!",
+        "sender": "assistant",
+        "timestamp": "2025-07-24T19:06:01.546Z",
+        "type": "query"
+      },
+      {
+        "id": "1753383965964",
+        "content": "make me a dashboard to measure rpm patters with wind speed correlation",
+        "sender": "user",
+        "timestamp": "2025-07-24T19:06:05.964Z",
+        "type": "query"
+      },
+      {
+        "id": "1753384006001",
+        "content": "**🎨 Generated Dashboard Component:**\n• **Title:** RPM vs. Wind Speed Correlation\n• **Description:** A scatter plot visualizing the relationship between wind speed and turbine rotor speed from telemetry data.\n\nThis response includes semantic classification and generated dashboard components where applicable.",
+        "sender": "assistant",
+        "timestamp": "2025-07-24T19:06:46.000Z",
+        "type": "result",
+        "executionTime": 40036,
+        "generatedCode": {
+          "title": "RPM vs. Wind Speed Correlation",
+          "description": "A scatter plot visualizing the relationship between wind speed and turbine rotor speed from telemetry data.",
+          "componentCode": "function RpmWindSpeedCorrelationChart() {\n  const [data, setData] = useState([])\n  const [loading, setLoading] = useState(true)\n\n  useEffect(() => {\n    fetchCorrelationData()\n  }, [])\n\n  const fetchCorrelationData = async () => {\n    try {\n      const response = await fetch('/api/data/telemetry?limit=100')\n      const telemetry = await response.json()\n      const chartData = telemetry.map(item => ({\n        windSpeed: item.wind_speed_mph,\n        rpm: item.rotor_rpm\n      }))\n      setData(chartData)\n    } catch (error) {\n      console.error('Error fetching correlation data:', error)\n    } finally {\n      setLoading(false)\n    }\n  }\n\n  if (loading) return <Card><CardContent className=\"flex items-center justify-center h-64\"><div className=\"text-foreground\">Loading...</div></CardContent></Card>\n\n  return (\n    <Card className=\"w-full\">\n      <CardHeader>\n        <CardTitle className=\"text-card-foreground\">RPM vs. Wind Speed Correlation</CardTitle>\n      </CardHeader>\n      <CardContent>\n        <ResponsiveContainer width=\"100%\" height={400}>\n          <ScatterChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>\n            <CartesianGrid stroke=\"hsl(var(--border))\" strokeDasharray=\"3 3\" />\n            <XAxis \n              dataKey=\"windSpeed\" \n              type=\"number\"\n              name=\"Wind Speed\"\n              unit=\" mph\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Wind Speed (mph)', position: 'insideBottom', offset: -10, style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <YAxis \n              dataKey=\"rpm\" \n              type=\"number\"\n              name=\"Rotor RPM\"\n              unit=\" RPM\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Rotor RPM', angle: -90, position: 'insideLeft', style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <Tooltip \n              cursor={{ strokeDasharray: '3 3', stroke: 'hsl(var(--border))' }}\n              contentStyle={{ \n                backgroundColor: 'hsl(var(--card))',\n                border: '1px solid hsl(var(--border))',\n                borderRadius: '6px',\n                color: 'hsl(var(--card-foreground))',\n                fontSize: '12px'\n              }}\n              formatter={(value, name) => [value, name]}\n            />\n            <Scatter \n              name=\"Telemetry Reading\"\n              dataKey=\"rpm\" \n              fill=\"hsl(var(--chart-1))\" \n              stroke=\"hsl(var(--chart-1))\"\n              strokeWidth={1}\n            />\n          </ScatterChart>\n        </ResponsiveContainer>\n      </CardContent>\n    </Card>\n  )\n}",
+          "dataFunction": "const fetchRpmWindSpeedData = async () => {\n  try {\n    const response = await fetch('/api/data/telemetry?limit=100')\n    const telemetry = await response.json()\n    \n    const chartData = telemetry.map(item => ({\n      windSpeed: item.wind_speed_mph,\n      rpm: item.rotor_rpm\n    }))\n    \n    return chartData\n  } catch (error) {\n    console.error('Error fetching RPM and wind speed data:', error)\n    return []\n  }\n}",
+          "previewCode": "function RpmWindSpeedCorrelationChart() {\n  const [data, setData] = useState([])\n  const [loading, setLoading] = useState(true)\n\n  useEffect(() => {\n    fetchCorrelationData()\n  }, [])\n\n  const fetchCorrelationData = async () => {\n    try {\n      const response = await fetch('/api/data/telemetry?limit=100')\n      const telemetry = await response.json()\n      const chartData = telemetry.map(item => ({\n        windSpeed: item.wind_speed_mph,\n        rpm: item.rotor_rpm\n      }))\n      setData(chartData)\n    } catch (error) {\n      console.error('Error fetching correlation data:', error)\n    } finally {\n      setLoading(false)\n    }\n  }\n\n  if (loading) return <Card><CardContent className=\"flex items-center justify-center h-64\"><div className=\"text-foreground\">Loading...</div></CardContent></Card>\n\n  return (\n    <Card className=\"w-full\">\n      <CardHeader>\n        <CardTitle className=\"text-card-foreground\">RPM vs. Wind Speed Correlation</CardTitle>\n      </CardHeader>\n      <CardContent>\n        <ResponsiveContainer width=\"100%\" height={400}>\n          <ScatterChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>\n            <CartesianGrid stroke=\"hsl(var(--border))\" strokeDasharray=\"3 3\" />\n            <XAxis \n              dataKey=\"windSpeed\" \n              type=\"number\"\n              name=\"Wind Speed\"\n              unit=\" mph\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Wind Speed (mph)', position: 'insideBottom', offset: -10, style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <YAxis \n              dataKey=\"rpm\" \n              type=\"number\"\n              name=\"Rotor RPM\"\n              unit=\" RPM\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Rotor RPM', angle: -90, position: 'insideLeft', style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <Tooltip \n              cursor={{ strokeDasharray: '3 3', stroke: 'hsl(var(--border))' }}\n              contentStyle={{ \n                backgroundColor: 'hsl(var(--card))',\n                border: '1px solid hsl(var(--border))',\n                borderRadius: '6px',\n                color: 'hsl(var(--card-foreground))',\n                fontSize: '12px'\n              }}\n              formatter={(value, name) => [value, name]}\n            />\n            <Scatter \n              name=\"Telemetry Reading\"\n              dataKey=\"rpm\" \n              fill=\"hsl(var(--chart-1))\" \n              stroke=\"hsl(var(--chart-1))\"\n              strokeWidth={1}\n            />\n          </ScatterChart>\n        </ResponsiveContainer>\n      </CardContent>\n    </Card>\n  )\n}",
+          "dashboardId": "dashboard_1753384004997_q62s085kg"
+        }
+      },
+      {
+        "id": "1753384150305",
+        "content": "make me a dashboard to measure rpm patters with wind speed correlation using red for the color of the nodes on the plot",
+        "sender": "user",
+        "timestamp": "2025-07-24T19:09:10.305Z",
+        "type": "query"
+      },
+      {
+        "id": "1753384224330",
+        "content": "**🎨 Generated Dashboard Component:**\n• **Title:** RPM vs. Wind Speed Correlation\n• **Description:** A scatter plot visualizing the correlation between wind speed and rotor RPM, highlighting operational patterns.\n\nThis response includes semantic classification and generated dashboard components where applicable.",
+        "sender": "assistant",
+        "timestamp": "2025-07-24T19:10:24.329Z",
+        "type": "result",
+        "executionTime": 74024,
+        "generatedCode": {
+          "title": "RPM vs. Wind Speed Correlation",
+          "description": "A scatter plot visualizing the correlation between wind speed and rotor RPM, highlighting operational patterns.",
+          "componentCode": "function RpmWindCorrelationChart() {\n  const [data, setData] = useState([])\n  const [loading, setLoading] = useState(true)\n\n  useEffect(() => {\n    fetchTelemetryData()\n  }, [])\n\n  const fetchTelemetryData = async () => {\n    try {\n      const response = await fetch('/api/data/telemetry?limit=100')\n      const telemetry = await response.json()\n      const chartData = telemetry.map(item => ({\n        windSpeed: item.wind_speed_mph,\n        rpm: item.rotor_rpm\n      }))\n      setData(chartData)\n    } catch (error) {\n      console.error('Error fetching data:', error)\n    } finally {\n      setLoading(false)\n    }\n  }\n\n  if (loading) return <Card><CardContent className=\"flex items-center justify-center h-64\"><div className=\"text-foreground\">Loading...</div></CardContent></Card>\n\n  return (\n    <Card className=\"w-full\">\n      <CardHeader>\n        <CardTitle className=\"text-card-foreground\">RPM vs. Wind Speed Correlation</CardTitle>\n      </CardHeader>\n      <CardContent>\n        <ResponsiveContainer width=\"100%\" height={400}>\n          <ScatterChart margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>\n            <CartesianGrid stroke=\"hsl(var(--border))\" strokeDasharray=\"3 3\" />\n            <XAxis \n              type=\"number\"\n              dataKey=\"windSpeed\" \n              name=\"Wind Speed\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Wind Speed (mph)', position: 'insideBottom', offset: -10, style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <YAxis \n              type=\"number\"\n              dataKey=\"rpm\" \n              name=\"Rotor RPM\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Rotor RPM', angle: -90, position: 'insideLeft', style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <Tooltip \n              cursor={{ strokeDasharray: '3 3', stroke: 'hsl(var(--border))' }}\n              contentStyle={{ \n                backgroundColor: 'hsl(var(--card))',\n                border: '1px solid hsl(var(--border))',\n                borderRadius: '6px',\n                color: 'hsl(var(--card-foreground))',\n                fontSize: '12px'\n              }}\n            />\n            <Scatter \n              name=\"Turbine Reading\" \n              dataKey=\"rpm\"\n              fill=\"#ef4444\" // Red for nodes as requested\n            />\n          </ScatterChart>\n        </ResponsiveContainer>\n      </CardContent>\n    </Card>\n  )\n}",
+          "dataFunction": "const fetchRpmWindCorrelationData = async () => {\n  try {\n    const response = await fetch('/api/data/telemetry?limit=100');\n    if (!response.ok) {\n      throw new Error(`HTTP error! Status: ${response.status}`);\n    }\n    const telemetryData = await response.json();\n    \n    const chartData = telemetryData.map(item => ({\n      windSpeed: item.wind_speed_mph,\n      rpm: item.rotor_rpm\n    }));\n    \n    return chartData;\n  } catch (error) {\n    console.error(\"Error fetching RPM correlation data:\", error);\n    return [];\n  }\n}",
+          "previewCode": "function RpmWindCorrelationChart() {\n  const [data, setData] = useState([])\n  const [loading, setLoading] = useState(true)\n\n  useEffect(() => {\n    fetchTelemetryData()\n  }, [])\n\n  const fetchTelemetryData = async () => {\n    try {\n      const response = await fetch('/api/data/telemetry?limit=100')\n      const telemetry = await response.json()\n      const chartData = telemetry.map(item => ({\n        windSpeed: item.wind_speed_mph,\n        rpm: item.rotor_rpm\n      }))\n      setData(chartData)\n    } catch (error) {\n      console.error('Error fetching data:', error)\n    } finally {\n      setLoading(false)\n    }\n  }\n\n  if (loading) return <Card><CardContent className=\"flex items-center justify-center h-64\"><div className=\"text-foreground\">Loading...</div></CardContent></Card>\n\n  return (\n    <Card className=\"w-full\">\n      <CardHeader>\n        <CardTitle className=\"text-card-foreground\">RPM vs. Wind Speed Correlation</CardTitle>\n      </CardHeader>\n      <CardContent>\n        <ResponsiveContainer width=\"100%\" height={400}>\n          <ScatterChart margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>\n            <CartesianGrid stroke=\"hsl(var(--border))\" strokeDasharray=\"3 3\" />\n            <XAxis \n              type=\"number\"\n              dataKey=\"windSpeed\" \n              name=\"Wind Speed\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Wind Speed (mph)', position: 'insideBottom', offset: -10, style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <YAxis \n              type=\"number\"\n              dataKey=\"rpm\" \n              name=\"Rotor RPM\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Rotor RPM', angle: -90, position: 'insideLeft', style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <Tooltip \n              cursor={{ strokeDasharray: '3 3', stroke: 'hsl(var(--border))' }}\n              contentStyle={{ \n                backgroundColor: 'hsl(var(--card))',\n                border: '1px solid hsl(var(--border))',\n                borderRadius: '6px',\n                color: 'hsl(var(--card-foreground))',\n                fontSize: '12px'\n              }}\n            />\n            <Scatter \n              name=\"Turbine Reading\" \n              dataKey=\"rpm\"\n              fill=\"#ef4444\" // Red for nodes as requested\n            />\n          </ScatterChart>\n        </ResponsiveContainer>\n      </CardContent>\n    </Card>\n  )\n}",
+          "dashboardId": "dashboard_1753384223322_69uy61raq"
+        }
+      },
+      {
+        "id": "1753384488686",
+        "content": "make me a dashboard to measure rpm patters with wind speed correlation using red for the color of the nodes on the plot",
+        "sender": "user",
+        "timestamp": "2025-07-24T19:14:48.686Z",
+        "type": "query"
+      },
+      {
+        "id": "1753384546115",
+        "content": "Successfully updated 2 dashboard(s): RPM & Wind Speed Correlation, RPM vs. Wind Speed Correlation. The changes have been applied and saved.",
+        "sender": "assistant",
+        "timestamp": "2025-07-24T19:15:46.114Z",
+        "type": "result",
+        "executionTime": 57428
+      },
+      {
+        "id": "1753387399832",
+        "content": "make me a dashboard to measure rpm patters with wind speed correlation using red for the color of the nodes on the plot",
+        "sender": "user",
+        "timestamp": "2025-07-24T20:03:19.832Z",
+        "type": "query"
+      },
+      {
+        "id": "1753387422008",
+        "content": "Failed to update dashboards: Unknown error",
+        "sender": "assistant",
+        "timestamp": "2025-07-24T20:03:42.007Z",
+        "type": "result",
+        "executionTime": 22175
+      }
+    ],
+    "createdAt": "2025-07-24T19:06:05.964Z",
+    "updatedAt": "2025-07-24T21:15:36.162Z",
+    "userId": "user_123"
+  },
+  {
+    "id": "thread_1753387436365_i5igfu4fp",
+    "title": "make me a dashboard to...",
+    "messages": [
+      {
+        "id": "welcome",
+        "content": "Hello!",
+        "sender": "assistant",
+        "timestamp": "2025-07-24T19:06:01.546Z",
+        "type": "query"
+      },
+      {
+        "id": "1753387438622",
+        "content": "make me a dashboard to measure rpm patters with wind speed correlation using red for the color of the nodes on the plot",
+        "sender": "user",
+        "timestamp": "2025-07-24T20:03:58.622Z",
+        "type": "query"
+      },
+      {
+        "id": "1753387613393",
+        "content": "make me a dashboard to measure rpm patters with wind speed correlation using red for the color of the nodes on the plot",
+        "sender": "user",
+        "timestamp": "2025-07-24T20:06:53.393Z",
+        "type": "query"
+      },
+      {
+        "id": "1753387702686",
+        "content": "**🎨 Generated Dashboard Component:**\n• **Title:** RPM vs. Wind Speed Correlation\n• **Description:** A scatter plot showing the correlation between rotor RPM and wind speed for wind turbines, highlighting operational patterns.\n\nThis response includes semantic classification and generated dashboard components where applicable.",
+        "sender": "assistant",
+        "timestamp": "2025-07-24T20:08:22.685Z",
+        "type": "result",
+        "executionTime": 89292,
+        "generatedCode": {
+          "title": "RPM vs. Wind Speed Correlation",
+          "description": "A scatter plot showing the correlation between rotor RPM and wind speed for wind turbines, highlighting operational patterns.",
+          "componentCode": "function RpmWindSpeedCorrelation() {\n  const [data, setData] = useState([]);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    fetchTelemetryData();\n  }, []);\n\n  const fetchTelemetryData = async () => {\n    try {\n      const response = await fetch('/api/data/telemetry?limit=100');\n      if (!response.ok) {\n        throw new Error(`API call failed: ${response.status}`);\n      }\n      const telemetry = await response.json();\n      const chartData = telemetry.map(item => ({\n        windSpeed: item.wind_speed_mph,\n        rpm: item.rotor_rpm,\n      }));\n      setData(chartData);\n    } catch (error) {\n      console.error('Error fetching telemetry data:', error);\n      setData([]);\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  if (loading) {\n    return (\n      <Card>\n        <CardContent className=\"flex items-center justify-center h-[484px]\">\n          <div className=\"text-foreground\">Loading...</div>\n        </CardContent>\n      </Card>\n    );\n  }\n\n  return (\n    <Card className=\"w-full\">\n      <CardHeader>\n        <CardTitle className=\"text-card-foreground\">RPM Patterns vs. Wind Speed Correlation</CardTitle>\n      </CardHeader>\n      <CardContent>\n        <ResponsiveContainer width=\"100%\" height={400}>\n          <ScatterChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>\n            <CartesianGrid strokeDasharray=\"3 3\" stroke=\"hsl(var(--border))\" />\n            <XAxis \n              type=\"number\"\n              dataKey=\"windSpeed\" \n              name=\"Wind Speed\"\n              unit=\" mph\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Wind Speed (mph)', position: 'insideBottom', offset: -10, style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <YAxis \n              type=\"number\"\n              dataKey=\"rpm\" \n              name=\"Rotor RPM\"\n              unit=\" RPM\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Rotor RPM', angle: -90, position: 'insideLeft', style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <Tooltip \n              cursor={{ strokeDasharray: '3 3', stroke: 'hsl(var(--border))' }}\n              contentStyle={{ \n                backgroundColor: 'hsl(var(--card))',\n                border: '1px solid hsl(var(--border))',\n                borderRadius: '6px',\n                color: 'hsl(var(--card-foreground))',\n                fontSize: '12px'\n              }}\n              formatter={(value, name) => [value, name]}\n            />\n            <Scatter \n              name=\"Data Point\" \n              dataKey=\"rpm\"\n              fill=\"#ef4444\" \n              stroke=\"#ef4444\"\n              strokeWidth={1}\n            />\n          </ScatterChart>\n        </ResponsiveContainer>\n      </CardContent>\n    </Card>\n  );\n}",
+          "dataFunction": "const fetchRpmWindSpeedData = async () => {\n  try {\n    const response = await fetch('/api/data/telemetry?limit=100');\n    if (!response.ok) {\n      throw new Error(`API call failed with status: ${response.status}`);\n    }\n    const telemetry = await response.json();\n    \n    const chartData = telemetry.map(item => ({\n      windSpeed: item.wind_speed_mph,\n      rpm: item.rotor_rpm,\n    }));\n    \n    return chartData;\n  } catch (error) {\n    console.error(\"Error fetching RPM vs Wind Speed data:\", error);\n    return [];\n  }\n};",
+          "previewCode": "function RpmWindSpeedCorrelation() {\n  const [data, setData] = useState([]);\n  const [loading, setLoading] = useState(true);\n\n  useEffect(() => {\n    fetchTelemetryData();\n  }, []);\n\n  const fetchTelemetryData = async () => {\n    try {\n      const response = await fetch('/api/data/telemetry?limit=100');\n      if (!response.ok) {\n        throw new Error(`API call failed: ${response.status}`);\n      }\n      const telemetry = await response.json();\n      const chartData = telemetry.map(item => ({\n        windSpeed: item.wind_speed_mph,\n        rpm: item.rotor_rpm,\n      }));\n      setData(chartData);\n    } catch (error) {\n      console.error('Error fetching telemetry data:', error);\n      setData([]);\n    } finally {\n      setLoading(false);\n    }\n  };\n\n  if (loading) {\n    return (\n      <Card>\n        <CardContent className=\"flex items-center justify-center h-[484px]\">\n          <div className=\"text-foreground\">Loading...</div>\n        </CardContent>\n      </Card>\n    );\n  }\n\n  return (\n    <Card className=\"w-full\">\n      <CardHeader>\n        <CardTitle className=\"text-card-foreground\">RPM Patterns vs. Wind Speed Correlation</CardTitle>\n      </CardHeader>\n      <CardContent>\n        <ResponsiveContainer width=\"100%\" height={400}>\n          <ScatterChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>\n            <CartesianGrid strokeDasharray=\"3 3\" stroke=\"hsl(var(--border))\" />\n            <XAxis \n              type=\"number\"\n              dataKey=\"windSpeed\" \n              name=\"Wind Speed\"\n              unit=\" mph\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Wind Speed (mph)', position: 'insideBottom', offset: -10, style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <YAxis \n              type=\"number\"\n              dataKey=\"rpm\" \n              name=\"Rotor RPM\"\n              unit=\" RPM\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Rotor RPM', angle: -90, position: 'insideLeft', style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <Tooltip \n              cursor={{ strokeDasharray: '3 3', stroke: 'hsl(var(--border))' }}\n              contentStyle={{ \n                backgroundColor: 'hsl(var(--card))',\n                border: '1px solid hsl(var(--border))',\n                borderRadius: '6px',\n                color: 'hsl(var(--card-foreground))',\n                fontSize: '12px'\n              }}\n              formatter={(value, name) => [value, name]}\n            />\n            <Scatter \n              name=\"Data Point\" \n              dataKey=\"rpm\"\n              fill=\"#ef4444\" \n              stroke=\"#ef4444\"\n              strokeWidth={1}\n            />\n          </ScatterChart>\n        </ResponsiveContainer>\n      </CardContent>\n    </Card>\n  );\n}",
+          "dashboardId": "dashboard_1753387701683_63qgyawvz"
+        }
+      }
+    ],
+    "createdAt": "2025-07-24T20:03:56.366Z",
+    "updatedAt": "2025-07-24T21:05:45.906Z",
+    "userId": "user_123"
+  },
+  {
+    "id": "thread_1753391737984_57xqoj7db",
+    "title": "make me a dashboard to...",
+    "messages": [
+      {
+        "id": "welcome",
+        "content": "Hello!",
+        "sender": "assistant",
+        "timestamp": "2025-07-24T19:06:01.546Z",
+        "type": "query"
+      },
+      {
+        "id": "1753391740171",
+        "content": "make me a dashboard to measure rpm patters with wind speed correlation using red for the color of the nodes on the plot",
+        "sender": "user",
+        "timestamp": "2025-07-24T21:15:40.171Z",
+        "type": "query"
+      },
+      {
+        "id": "1753391819294",
+        "content": "**🎨 Generated Dashboard Component:**\n• **Title:** RPM vs. Wind Speed Correlation\n• **Description:** A scatter plot visualizing the relationship between wind turbine rotor RPM and wind speed.\n\nThis response includes semantic classification and generated dashboard components where applicable.",
+        "sender": "assistant",
+        "timestamp": "2025-07-24T21:16:59.293Z",
+        "type": "result",
+        "executionTime": 79122,
+        "generatedCode": {
+          "title": "RPM vs. Wind Speed Correlation",
+          "description": "A scatter plot visualizing the relationship between wind turbine rotor RPM and wind speed.",
+          "componentCode": "function RpmVsWindSpeedCorrelation() {\n  const [data, setData] = useState([])\n  const [loading, setLoading] = useState(true)\n\n  useEffect(() => {\n    fetchData()\n  }, [])\n\n  const fetchData = async () => {\n    try {\n      const response = await fetch('/api/data/telemetry?limit=100')\n      const telemetry = await response.json()\n      const chartData = telemetry.map(item => ({\n        windSpeed: item.wind_speed_mph,\n        rpm: item.rotor_rpm,\n      }))\n      setData(chartData)\n    } catch (error) {\n      console.error('Error fetching data:', error)\n    } finally {\n      setLoading(false)\n    }\n  }\n\n  if (loading) return <Card><CardContent className=\"flex items-center justify-center h-96\"><div className=\"text-foreground\">Loading...</div></CardContent></Card>\n\n  return (\n    <Card className=\"w-full\">\n      <CardHeader>\n        <CardTitle className=\"text-card-foreground\">RPM vs Wind Speed Correlation</CardTitle>\n      </CardHeader>\n      <CardContent>\n        <ResponsiveContainer width=\"100%\" height={400}>\n          <ScatterChart margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>\n            <CartesianGrid stroke=\"hsl(var(--border))\" strokeDasharray=\"3 3\" />\n            <XAxis \n              type=\"number\"\n              dataKey=\"windSpeed\" \n              name=\"Wind Speed\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Wind Speed (mph)', position: 'insideBottom', offset: -10, style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <YAxis \n              type=\"number\"\n              dataKey=\"rpm\" \n              name=\"Rotor RPM\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Rotor RPM', angle: -90, position: 'insideLeft', style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <Tooltip \n              cursor={{ strokeDasharray: '3 3', stroke: 'hsl(var(--border))' }}\n              contentStyle={{ \n                backgroundColor: 'hsl(var(--card))',\n                border: '1px solid hsl(var(--border))',\n                borderRadius: '6px',\n                color: 'hsl(var(--card-foreground))',\n                fontSize: '12px'\n              }}\n            />\n            <Scatter \n              name=\"RPM vs Wind Speed\"\n              data={data}\n              fill=\"#ef4444\" \n              stroke=\"#ef4444\"\n              strokeWidth={1}\n            />\n          </ScatterChart>\n        </ResponsiveContainer>\n      </CardContent>\n    </Card>\n  )\n}",
+          "dataFunction": "const fetchRpmWindSpeedData = async () => {\n  try {\n    const response = await fetch('/api/data/telemetry?limit=100');\n    if (!response.ok) {\n      throw new Error(`HTTP error! status: ${response.status}`);\n    }\n    const telemetry = await response.json();\n    \n    const chartData = telemetry.map(item => ({\n      windSpeed: item.wind_speed_mph,\n      rpm: item.rotor_rpm,\n    }));\n    \n    return chartData;\n  } catch (error) {\n    console.error('Error fetching RPM and wind speed data:', error);\n    return [];\n  }\n};",
+          "previewCode": "function RpmVsWindSpeedCorrelation() {\n  const [data, setData] = useState([])\n  const [loading, setLoading] = useState(true)\n\n  useEffect(() => {\n    fetchData()\n  }, [])\n\n  const fetchData = async () => {\n    try {\n      const response = await fetch('/api/data/telemetry?limit=100')\n      const telemetry = await response.json()\n      const chartData = telemetry.map(item => ({\n        windSpeed: item.wind_speed_mph,\n        rpm: item.rotor_rpm,\n      }))\n      setData(chartData)\n    } catch (error) {\n      console.error('Error fetching data:', error)\n    } finally {\n      setLoading(false)\n    }\n  }\n\n  if (loading) return <Card><CardContent className=\"flex items-center justify-center h-96\"><div className=\"text-foreground\">Loading...</div></CardContent></Card>\n\n  return (\n    <Card className=\"w-full\">\n      <CardHeader>\n        <CardTitle className=\"text-card-foreground\">RPM vs Wind Speed Correlation</CardTitle>\n      </CardHeader>\n      <CardContent>\n        <ResponsiveContainer width=\"100%\" height={400}>\n          <ScatterChart margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>\n            <CartesianGrid stroke=\"hsl(var(--border))\" strokeDasharray=\"3 3\" />\n            <XAxis \n              type=\"number\"\n              dataKey=\"windSpeed\" \n              name=\"Wind Speed\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Wind Speed (mph)', position: 'insideBottom', offset: -10, style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <YAxis \n              type=\"number\"\n              dataKey=\"rpm\" \n              name=\"Rotor RPM\"\n              tick={{ fill: 'hsl(var(--muted-foreground))', fontSize: 12 }}\n              axisLine={{ stroke: 'hsl(var(--border))' }}\n              label={{ value: 'Rotor RPM', angle: -90, position: 'insideLeft', style: { fill: 'hsl(var(--muted-foreground))', fontSize: 14 } }}\n            />\n            <Tooltip \n              cursor={{ strokeDasharray: '3 3', stroke: 'hsl(var(--border))' }}\n              contentStyle={{ \n                backgroundColor: 'hsl(var(--card))',\n                border: '1px solid hsl(var(--border))',\n                borderRadius: '6px',\n                color: 'hsl(var(--card-foreground))',\n                fontSize: '12px'\n              }}\n            />\n            <Scatter \n              name=\"RPM vs Wind Speed\"\n              data={data}\n              fill=\"#ef4444\" \n              stroke=\"#ef4444\"\n              strokeWidth={1}\n            />\n          </ScatterChart>\n        </ResponsiveContainer>\n      </CardContent>\n    </Card>\n  )\n}",
+          "dashboardId": "dashboard_1753391818290_ufh6es2vw"
+        }
+      }
+    ],
+    "createdAt": "2025-07-24T21:15:37.984Z",
+    "updatedAt": "2025-07-24T21:20:13.347Z",
+    "userId": "user_123"
+  }
+]
