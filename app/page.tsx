@@ -1,8 +1,9 @@
+"use client"
+
 import dynamic from 'next/dynamic'
 
-// Dynamically import the Dashboard component to avoid SSR issues
+// Dynamically import the Dashboard component
 const Dashboard = dynamic(() => import('@/dashboard'), {
-  ssr: false,
   loading: () => (
     <div className="flex min-h-screen items-center justify-center">
       <div className="text-center">

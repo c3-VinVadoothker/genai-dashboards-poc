@@ -93,13 +93,7 @@ const nextConfig: NextConfig = {
   
   // Ensure proper redirects
   async redirects() {
-    return [
-      {
-        source: '/index',
-        destination: '/',
-        permanent: true,
-      },
-    ];
+    return [];
   },
   
   // Ensure proper headers
@@ -110,7 +104,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'X-Frame-Options',
-            value: 'DENY',
+            value: 'SAMEORIGIN',
           },
           {
             key: 'X-Content-Type-Options',
