@@ -15,9 +15,9 @@
     "updatedAt": "2025-07-24T21:02:36.036Z"
   },
   {
-    "id": "saved_1753391160373_3uvuhn0e5",
-    "dashboardId": "dashboard_1753384223322_69uy61raq",
-    "name": "RPM vs. Wind Speed Correlation",
+    "id": "saved_1753394628046_fb9jcd2c7",
+    "dashboardId": "dashboard_1753394433554_csr134p9c",
+    "name": "Turbine Status by Location",
     "position": {
       "x": 1,
       "y": 0
@@ -26,7 +26,7 @@
       "width": 6,
       "height": 300
     },
-    "createdAt": "2025-07-24T21:06:00.373Z",
-    "updatedAt": "2025-07-24T21:06:00.373Z"
+    "createdAt": "2025-07-24T22:03:48.046Z",
+    "updatedAt": "2025-07-24T22:03:48.046Z"
   }
 ]
